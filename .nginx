@@ -1,0 +1,10 @@
+upstream backend {
+    server server1.example.com;
+    server server2.example.com;
+}
+
+server {
+    location / {
+        proxy_pass http://backend;
+    }
+}
